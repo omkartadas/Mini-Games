@@ -1,0 +1,153 @@
+:root {
+  box-sizing: border-box;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000428, #004e92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+#app {
+  width: 60%;
+  text-align: center;
+}
+
+.summary {
+  border: 3px solid #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2.5em;
+}
+
+#inGame {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+#result {
+  font-size: 1.5em;
+}
+
+.games {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.option {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 3em;
+  background-color: #000;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.option:hover {
+  cursor: pointer;
+  background-color: #676060;
+  transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #282c34;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#game-over-message {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#restart-button {
+  background-color: #61dafb;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#restart-button:hover {
+  background-color: #21a1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .option {
+    font-size: 2em;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  #inGame {
+    font-size: 1.5em;
+  }
+
+  #result {
+    font-size: 1.2em;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .option {
+    font-size: 1.5em;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  #inGame {
+    font-size: 1.2em;
+  }
+
+  #result {
+    font-size: 1em;
+  }
+}
